@@ -1,28 +1,58 @@
----
-layout: default
----
-{% assign posts_count = paginator.posts | size %}
-
-<div class="home">
-  {% if posts_count > 0 %}
-    <div class="posts">
-      {% for post in paginator.posts %}
-        <div class="post py3">
-          <p class="post-meta">{{ post.date | date: site.date_format }}</p>
-          <a href="{{ post.url | prepend: site.baseurl }}" class="post-link"><h3 class="h1 post-title">{{ post.title }}</h3></a>
-          <span class="post-summary">
-            {% if post.summary %}
-              {{ post.summary }}
-            {% else %}
-              {{ post.excerpt }}
-            {% endif %}
-          </span>
-        </div>
-      {% endfor %}
-    </div>
-
-    {% include pagination.html %}
-  {% else %}
-    <h1 class='center'>{{ site.text.index.coming_soon }}</h1>
-  {% endif %}
-</div>
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="Awesome Unicorns">
+		<meta name="author" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="apple-itunes-app" content="app-id=994182280">
+		<meta property="og:url" content="https://yourwebsite.com">
+		<meta property="og:title" content="App Name">
+		<meta property="og:description" content="Awesome Unicorns">
+		<meta property="og:image" content="https://yourwebsite.com/promo-image.jpg">
+		<meta name="twitter:card" content="app">
+		<meta name="twitter:site" content="@twitterusername">
+		<meta name="twitter:description" content="Awesome Unicorns">
+		<meta name="twitter:app:name:iphone" content="App Name">
+		<meta name="twitter:app:id:iphone" content="994182280">
+		<title>Manga Reader app for iOS</title>
+		<link href="index.css" rel="stylesheet">
+	</head>
+	<body>
+		<header class="container">
+			<div class="responsive intro-container">
+				<div class="app-icon">
+					<img alt="App icon" src="app-icon.png">
+					<p>Manga Hub</p>
+					<!-- <p>A manga reader app for iOS</p> -->
+				</div>
+				<div class="intro">
+					<h2>A manga reader app for iOS</h2>
+				</div>
+				<a class="primary-btn app-store-btn" href="https://itunes.apple.com/us/app/manga-hub/id1271999643?ls=1&mt=8">Get it on the App Store</a>
+			</div>
+			<div class="responsive iphone">
+				<div class="iphone-screenshot">
+					<img src="app-screenshot.png" alt="App screenshot">
+				</div>
+				<img class="iphone-mask" src="iphone.png">
+			</div>
+		</header>
+		<footer class="container footer">
+			<div class="sep"></div>
+			<p class="responsive credit">Made with ♥ by <a href="https://www.facebook.com/Manga-Hub-891323307738531/">Manga Hub Team</a></p>
+			<div class="responsive contact">
+				<a href="http://manga-hub.qtstudio.xyz/">Support</a>
+				<!-- <a href="">Press Kit</a> -->
+			</div>
+		</footer>
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+			ga('create', 'UA-51097822-2', 'auto');
+			ga('send', 'pageview');
+		</script>
+	</body>
+</html>
